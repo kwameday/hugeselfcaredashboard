@@ -1,6 +1,6 @@
-# Huge Selfcare Performance Dashboard (Static)
+# Huge Selfcare Performance Dashboard
 
-Bright, single-page dashboard for the period:
+Dashboard for the period:
 **30th October to 30th November 2025**
 
 ## Files
@@ -25,7 +25,4 @@ Open `index.html` in a browser (or use a simple local server).
 ### Users CSV headers
 `user,attempts`
 
-## Cloudflare Pages deploy
-- Framework preset: **None**
-- Build command: *(none)*
-- Output directory: `/`
+
