@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Huge Selfcare Performance Dashboard</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="title">
+        <h1 id="dashTitle">Huge Selfcare Performance Dashboard</h1>
+        <div class="meta">
+          <div class="pill"><strong>Period:</strong> <span id="dashPeriod"></span></div>
+          <div class="pill"><strong>Currency:</strong> <span id="dashCurrency"></span></div>
+          <div class="pill"><strong>Last updated:</strong> <span id="lastUpdated">—</span></div>
+        </div>
+      </div>
+
+      <div class="pill hint">
+        <strong>Edit later:</strong> update <code>data.json</code> (or paste JSON in the panel) and click <em>Update</em>.
+        Tables can be edited inline and saved in-browser.
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- LEFT: DASHBOARD -->
+      <div class="card">
+        <h2>Transaction Stats</h2>
+        <div class="sub">High-level KPIs + success metrics</div>
+
+        <div class="kpis" id="kpiGrid"></div>
+
+        <div class="split" style="margin-top:12px">
+          <div class="card inner">
+            <h2>Payment Status</h2>
+            <div class="chartBox"><canvas id="paymentChart"></canvas></div>
+          </div>
+          <div class="card inner">
+            <h2>Transaction Status</h2>
+            <div class="chartBox"><canvas id="txnChart"></canvas></div>
+          </div>
+        </div>
+
+        <div class="split" style="margin-top:12px">
+          <div class="card inner">
+            <h2>Failure Reasons (Count)</h2>
+            <div class="chartBox tall"><canvas id="failChart"></canvas></div>
+          </div>
+          <div class="card inner">
+            <h2>Top Products by Orders</h2>
+            <div class="chartBox tall"><canvas id="catChart"></canvas></div>
+          </div>
+        </div>
+
+        <div class="card inner" style="margin-top:12px">
+          <h2>Users (Top Attempts)</h2>
+          <div class="chartBox"><canvas id="usersChart"></canvas></div>
+        </div>
+
+        <div class="card inner" style="margin-top:12px">
+          <div class="toolbar">
+            <div>
+              <h2 style="margin:0">Transactions by Product Categories</h2>
+              <div class="sub" style="margin:6px 0 0 0">Edit cells → Save. Or import CSV.</div>
+            </div>
+            <div class="actions">
+              <button class="btn primary" id="saveTablesBtn">Save Table Edits</button>
+              <button class="btn danger" id="resetTablesBtn">Reset Saved Table Edits</button>
+            </div>
+          </div>
+
+          <div class="importRow">
+            <label class="fileBtn">
+              Import Categories CSV
+              <input type="file" id="catsCsvInput" accept=".csv,text/csv" />
+            </label>
+            <button class="btn" id="exportCatsCsvBtn">Export Categories CSV</button>
+          </div>
+
+          <div class="tableWrap">
+            <table id="categoriesTable"></table>
+          </div>
+        </div>
+
+        <div class="card inner" style="margin-top:12px">
+          <div class="toolbar">
+            <div>
+              <h2 style="margin:0">Users and Transaction Attempts</h2>
+              <div class="sub" style="margin:6px 0 0 0">Edit cells → Save. Or import CSV.</div>
+            </div>
+          </div>
+
+          <div class="importRow">
+            <label class="fileBtn">
+              Import Users CSV
+              <input type="file" id="usersCsvInput" accept=".csv,text/csv" />
+            </label>
+            <button class="btn" id="exportUsersCsvBtn">Export Users CSV</button>
+          </div>
+
+          <div class="tableWrap">
+            <table id="usersTable"></table>
+          </div>
+        </div>
+
+        <div class="footer">
+          Cloudflare Pages: set Build command = none, Output directory = <code>/</code>.
+        </div>
+      </div>
+
+      <!-- RIGHT: DATA PANEL -->
+      <div class="card">
+        <h2>Editable Data</h2>
+        <div class="sub">Loaded from <code>data.json</code>. You can also paste JSON here.</div>
+
+        <div class="dataPanel">
+          <div class="toolbar">
+            <button class="btn" id="reloadBtn">Reload from data.json</button>
+            <button class="btn primary" id="applyBtn">Update</button>
+            <button class="btn" id="copyJsonBtn">Copy JSON</button>
+            <button class="btn danger" id="resetBtn">Reset to Defaults</button>
+          </div>
+
+          <textarea id="dataJson" spellcheck="false"></textarea>
+
+          <div class="hint">
+            <strong>CSV formats:</strong><br/>
+            • Categories: <code>product,totalOrders,success,initiated,purchaseInitiated,failure</code><br/>
+            • Users: <code>user,attempts</code>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

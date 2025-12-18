@@ -1,0 +1,280 @@
+{
+  "title": "Huge Selfcare Performance Dashboard",
+  "period": "30th October to 30th November 2025",
+  "currency": "ZAR",
+  "currencySymbol": "ZAR",
+  "transactionStats": {
+    "totalOrders": 127,
+    "totalValueOrders": 7894.94,
+    "successOrders": 41,
+    "successValue": 1660.37,
+    "avgSuccessValue": 40.49,
+    "maxOrderValue": 279,
+    "minOrderValue": 2,
+    "failureOrders": 18,
+    "failureValue": 465
+  },
+  "paymentStatus": {
+    "Pending": 54,
+    "Authorized": 12,
+    "Succeeded": 29,
+    "Cancelled": 14,
+    "Reversal_success": 17,
+    "Reversal_failed": 1
+  },
+  "transactionStatus": {
+    "Initiated": 56,
+    "Purchase_initiated": 3,
+    "Success": 38,
+    "Failure": 30
+  },
+  "failureReasons": [
+    {
+      "reason": "Please retry the payment : Request timed out while reading from Telecom server : Net::ReadTimeout with #<TCPSocket:(closed)",
+      "count": 1
+    },
+    {
+      "reason": "Charge cannot be captured as the authorization has expired : 1312",
+      "count": 9
+    },
+    {
+      "reason": "Add Product Failed",
+      "count": 11
+    },
+    {
+      "reason": "Signature is not valid",
+      "count": 2
+    },
+    {
+      "reason": "Product Not Found.",
+      "count": 6
+    },
+    {
+      "reason": "Insufficient funds.",
+      "count": 1
+    },
+    {
+      "reason": "Please retry the payment : Error sending a post request to Telecom server : unexpected token at ''",
+      "count": 1
+    },
+    {
+      "reason": "Please retry the payment : Payment method already exists.",
+      "count": 1
+    },
+    {
+      "reason": "Please retry the payment : Failed to add payment method.",
+      "count": 1
+    }
+  ],
+  "categories": [
+    {
+      "product": "HM BYO Plan",
+      "totalOrders": 18,
+      "success": 3,
+      "initiated": 7,
+      "purchaseInitiated": 1,
+      "failure": 7
+    },
+    {
+      "product": "HM Voice 10 min",
+      "totalOrders": 13,
+      "success": 7,
+      "initiated": 3,
+      "purchaseInitiated": 2,
+      "failure": 1
+    },
+    {
+      "product": "HM Flexi Airtime",
+      "totalOrders": 34,
+      "success": 9,
+      "initiated": 9,
+      "purchaseInitiated": 0,
+      "failure": 16
+    },
+    {
+      "product": "HM SMS 150",
+      "totalOrders": 1,
+      "success": 0,
+      "initiated": 1,
+      "purchaseInitiated": 0,
+      "failure": 0
+    },
+    {
+      "product": "HM Data 1.5GB",
+      "totalOrders": 15,
+      "success": 3,
+      "initiated": 10,
+      "purchaseInitiated": 0,
+      "failure": 2
+    },
+    {
+      "product": "Start Me Up",
+      "totalOrders": 9,
+      "success": 2,
+      "initiated": 6,
+      "purchaseInitiated": 0,
+      "failure": 1
+    },
+    {
+      "product": "HM Voice 15 min",
+      "totalOrders": 3,
+      "success": 2,
+      "initiated": 1,
+      "purchaseInitiated": 0,
+      "failure": 0
+    },
+    {
+      "product": "HM SMS 50",
+      "totalOrders": 3,
+      "success": 1,
+      "initiated": 2,
+      "purchaseInitiated": 0,
+      "failure": 0
+    },
+    {
+      "product": "HM WhatsApp 2GB",
+      "totalOrders": 4,
+      "success": 1,
+      "initiated": 3,
+      "purchaseInitiated": 0,
+      "failure": 0
+    },
+    {
+      "product": "HM SMS 30",
+      "totalOrders": 2,
+      "success": 1,
+      "initiated": 0,
+      "purchaseInitiated": 0,
+      "failure": 1
+    },
+    {
+      "product": "First Gig",
+      "totalOrders": 4,
+      "success": 3,
+      "initiated": 1,
+      "purchaseInitiated": 0,
+      "failure": 0
+    },
+    {
+      "product": "HM Voice 30 min",
+      "totalOrders": 2,
+      "success": 1,
+      "initiated": 1,
+      "purchaseInitiated": 0,
+      "failure": 0
+    },
+    {
+      "product": "HM Data 2GB",
+      "totalOrders": 3,
+      "success": 2,
+      "initiated": 1,
+      "purchaseInitiated": 0,
+      "failure": 0
+    },
+    {
+      "product": "HM Voice 50 min",
+      "totalOrders": 1,
+      "success": 0,
+      "initiated": 1,
+      "purchaseInitiated": 0,
+      "failure": 0
+    },
+    {
+      "product": "HM Data 10GB",
+      "totalOrders": 2,
+      "success": 1,
+      "initiated": 1,
+      "purchaseInitiated": 0,
+      "failure": 0
+    },
+    {
+      "product": "HM Data 3GB",
+      "totalOrders": 1,
+      "success": 1,
+      "initiated": 0,
+      "purchaseInitiated": 0,
+      "failure": 0
+    },
+    {
+      "product": "HM Data 20GB",
+      "totalOrders": 12,
+      "success": 1,
+      "initiated": 9,
+      "purchaseInitiated": 0,
+      "failure": 2
+    }
+  ],
+  "users": {
+    "totalUniqueUsers": 17,
+    "attempts": [
+      {
+        "user": "27xxxxxx180",
+        "attempts": 25
+      },
+      {
+        "user": "27xxxxxx627",
+        "attempts": 25
+      },
+      {
+        "user": "27xxxxxx318",
+        "attempts": 5
+      },
+      {
+        "user": "27xxxxxx160",
+        "attempts": 1
+      },
+      {
+        "user": "27xxxxxx187",
+        "attempts": 7
+      },
+      {
+        "user": "27xxxxxx724",
+        "attempts": 10
+      },
+      {
+        "user": "27xxxxxx578",
+        "attempts": 4
+      },
+      {
+        "user": "27xxxxxx396",
+        "attempts": 1
+      },
+      {
+        "user": "27xxxxxx864",
+        "attempts": 1
+      },
+      {
+        "user": "27xxxxxx132",
+        "attempts": 1
+      },
+      {
+        "user": "27xxxxxx442",
+        "attempts": 9
+      },
+      {
+        "user": "27xxxxxx219",
+        "attempts": 2
+      },
+      {
+        "user": "27xxxxxx912",
+        "attempts": 3
+      },
+      {
+        "user": "27xxxxxx776",
+        "attempts": 1
+      },
+      {
+        "user": "27xxxxxx359",
+        "attempts": 7
+      },
+      {
+        "user": "27xxxxxx327",
+        "attempts": 14
+      },
+      {
+        "user": "27xxxxxx767",
+        "attempts": 1
+      }
+    ]
+  }
+}
